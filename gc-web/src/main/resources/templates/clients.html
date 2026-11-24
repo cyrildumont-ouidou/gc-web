@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Liste des clients</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+</head>
+<body class="bg-blue-50 p-8">
+<h1 class="mb-6 text-2xl font-semibold text-gray-800">Liste des clients</h1>
+<div class="mb-6 rounded-lg border border-green-200 bg-green-100 px-4 py-3 text-green-800">
+    {{hostName}}
+</div>
+<table class="w-full overflow-hidden rounded-lg bg-white text-left shadow">
+    <thead class="bg-gray-100 text-sm uppercase text-gray-600">
+    <tr>
+        <th class="px-4 py-3">Nom</th>
+        <th class="px-4 py-3">Prénom</th>
+        <th class="px-4 py-3">Adresse</th>
+    </tr>
+    </thead>
+    <tbody class="divide-y divide-gray-200">
+    {{#clients}}
+    <tr class="hover:bg-gray-50">
+        <td class="px-4 py-3">{{lastname}}</td>
+        <td class="px-4 py-3">{{firstname}}</td>
+        <td class="px-4 py-3">{{address}}</td>
+    </tr>
+    {{/clients}}
+    </tbody>
+</table>
+</body>
+</html>

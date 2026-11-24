@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+  mustache:
+    suffix: .html
+  http:
+    serviceclient:
+      gestionclient:
+        base-url: ${app.services.clients}
+
+# APP_SERVICES_CLIENTS
+app:
+  services:
+    clients: http://localhost:8080
